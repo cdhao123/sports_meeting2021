@@ -1,5 +1,5 @@
 <template>
-  <div class="navigator-outter" :class="{ 'fixed': fixed }">
+  <div class="navigator-outter" :class="{ fixed: fixed }">
     <nav class="navigator">
       <!-- 顶部导航栏：侧边弹出按钮、交大校徽、e瞳logo -->
       <div class="navigator-inner">
@@ -10,10 +10,18 @@
         </div>
         <div class="navigator-logos">
           <div class="navigator-logo-container">
-            <img class="navigator-logo" src="../../img/logo_xjtu.png" alt="logo_xjtu">
+            <img
+              class="navigator-logo"
+              src="../../img/logo_xjtu.png"
+              alt="logo_xjtu"
+            />
           </div>
           <div class="navigator-logo-container">
-            <img class="navigator-logo" src="../../img/logo_eeyes.png" alt="logo_eeyes">
+            <img
+              class="navigator-logo"
+              src="../../img/logo_eeyes.png"
+              alt="logo_eeyes"
+            />
           </div>
         </div>
         <div class="navigator-flex-grow"></div>
@@ -35,41 +43,55 @@
 
 <script>
 export default {
-  name: 'Navigator',
+  name: "Navigator",
   data() {
     return {
-      fixed: false
-    }
+      fixed: false,
+    };
   },
   mounted() {
-    window.addEventListener('scroll', this.onScroll, { passive: true })
+    window.addEventListener("scroll", this.onScroll, { passive: true });
   },
   destroyed() {
-    window.removeEventListener('scroll', this.onScroll)
+    window.removeEventListener("scroll", this.onScroll);
   },
   methods: {
     getBoundaryOffset() {
       if (window.document.body.clientWidth < 480) {
-        return 280
+        return 280;
       } else if (window.document.body.clientWidth < 640) {
-        return 320
+        return 320;
       } else {
-        return 440
+        return 440;
       }
     },
     onScroll() {
-      const offset = document.documentElement.scrollTop
+      const offset = document.documentElement.scrollTop;
       if (offset > this.getBoundaryOffset()) {
-        this.fixed = true
+        this.fixed = true;
       } else {
-        this.fixed = false
+        this.fixed = false;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style>
+@keyframes myanime {
+  0% {
+    background-color: white;
+    font-size: 1.3em;
+  }
+  100% {
+    background-color: #438be9;
+    font-size: 1.5em;
+  }
+}
+
+.navigator-actions li:hover {
+  animation: myanime 0.7s forwards;
+}
 .navigator {
   position: relative;
   z-index: 100;

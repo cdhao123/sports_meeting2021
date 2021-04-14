@@ -1,44 +1,44 @@
 <template>
   <div class="home-page">
-    <MainHeader/>
+    <MainHeader />
     <section class="home-page-main-section">
-      <GoldTops/>
-      <flash-message-list ref="flashMessageList"/>
-      <GameArrangement/>
-      <GameNews/>
-      <GameRanking/>
+      <GoldTops />
+      <flash-message-list ref="flashMessageList" />
+      <GameArrangement />
+      <GameNews />
+      <GameRanking />
     </section>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
-import FlashMessageList from '../components/FlashMessageList'
-import MainHeader from '../components/MainHeader'
-import GoldTops from '../components/GoldTops'
-import GameArrangement from '../components/GameArrangement'
-import GameNews from '../components/GameNews'
-import GameRanking from '../components/GameRanking'
+import { mapActions } from "vuex";
+import FlashMessageList from "../components/FlashMessageList";
+import MainHeader from "../components/MainHeader";
+import GoldTops from "../components/GoldTops";
+import GameArrangement from "../components/GameArrangement";
+import GameNews from "../components/GameNews";
+import GameRanking from "../components/GameRanking";
 
 export default {
-  name: 'PageHome',
+  name: "PageHome",
   components: {
     FlashMessageList,
     MainHeader,
     GoldTops,
     GameArrangement,
     GameNews,
-    GameRanking
+    GameRanking,
   },
-  mounted () {
-    this.fetchData()
+  mounted() {
+    this.fetchData();
   },
   methods: {
     ...mapActions({
-      fetchData: 'fetchData'
-    })
-  }
-}
+      fetchData: "fetchData",
+    }),
+  },
+};
 </script>
 
 <style>

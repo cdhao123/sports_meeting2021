@@ -1,9 +1,15 @@
 <template>
   <div class="gold-tops">
-    <div class="gold-tops-header">金牌排名</div>
+    <div class="gold-tops-header">金牌aaaaaa排名</div>
     <ul class="gold-tops-list">
-      <li v-for="(item, i) in teamsRankedGolden" :key="i" class="gold-tops-item">
-        <p class="gold-tops-item-line1">No.{{ i + 1 }}：{{ item.golden_count + item.golden_s_count }}枚</p>
+      <li
+        v-for="(item, i) in teamsRankedGolden"
+        :key="i"
+        class="gold-tops-item"
+      >
+        <p class="gold-tops-item-line1">
+          No.{{ i + 1 }}：{{ item.golden_count + item.golden_s_count }}枚
+        </p>
         <p class="gold-tops-item-line2">{{ item.name }}</p>
       </li>
     </ul>
@@ -11,16 +17,16 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'GoldTops',
+  name: "GoldTops",
   computed: {
     ...mapGetters({
-      teamsRankedGolden: 'teamsRankedGolden'
-    })
-  }
-}
+      teamsRankedGolden: "teamsRankedGolden",
+    }),
+  },
+};
 </script>
 
 <style>
@@ -28,7 +34,7 @@ export default {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 240px;
-  background-color: #fff;
+  background-color: rgb(175, 19, 19);
   border-radius: 12px;
   box-shadow: 2px 2px 12px #999;
   overflow: hidden;

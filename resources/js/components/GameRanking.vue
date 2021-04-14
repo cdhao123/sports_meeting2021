@@ -2,7 +2,7 @@
   <div class="game-ranking">
     <a id="ranking" name="ranking" rel="external nofollow">&nbsp;</a>
     <h2 class="game-ranking-title">奖牌排名</h2>
-    <hr class="game-ranking-hr">
+    <hr class="game-ranking-hr" />
     <div class="game-ranking-table-container">
       <table class="game-ranking-table">
         <tr class="game-ranking-first-line">
@@ -21,51 +21,51 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 
 function sumProperties(object, keys) {
-  return keys.map(k => object[k]).reduce((a, b) => a + b)
+  return keys.map((k) => object[k]).reduce((a, b) => a + b);
 }
 
 export default {
-  name: 'GameRanking',
+  name: "GameRanking",
   computed: {
     ...mapGetters({
-      teamsRankedMedal: 'teamsRankedMedal'
+      teamsRankedMedal: "teamsRankedMedal",
     }),
     computedTeamsRankedMedal() {
       const keys = [
-        'golden_count',
-        'golden_s_count',
-        'silver_count',
-        'silver_s_count',
-        'bronze_count',
-        'bronze_s_count'
-      ]
-      const result = []
+        "golden_count",
+        "golden_s_count",
+        "silver_count",
+        "silver_s_count",
+        "bronze_count",
+        "bronze_s_count",
+      ];
+      const result = [];
       for (let i = 0; i < this.teamsRankedMedal.length; i++) {
-        const item = this.teamsRankedMedal[i]
-        const total_count = sumProperties(item, keys)
+        const item = this.teamsRankedMedal[i];
+        const total_count = sumProperties(item, keys);
         if (i === 0) {
           result.push({
             ...item,
             total_count,
-            rank: i + 1
-          })
+            rank: i + 1,
+          });
         } else {
-          const last = result[i - 1]
-          const rank = total_count === last.total_count ? last.rank : i + 1
+          const last = result[i - 1];
+          const rank = total_count === last.total_count ? last.rank : i + 1;
           result.push({
             ...item,
             total_count,
-            rank
-          })
+            rank,
+          });
         }
       }
-      return result
-    }
-  }
-}
+      return result;
+    },
+  },
+};
 </script>
 
 <style>

@@ -2,7 +2,7 @@
   <div class="game-news">
     <a id="news" name="news" rel="external nofollow">&nbsp;</a>
     <h2 class="game-news-title">运动会新闻</h2>
-    <hr class="game-news-hr">
+    <hr class="game-news-hr" />
     <table class="game-news-table">
       <tr v-for="(item, i) in news" :key="i">
         <td class="game-news-number">News.{{ i + 1 }}</td>
@@ -15,25 +15,26 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'GameNews',
+  name: "GameNews",
   computed: {
     ...mapGetters({
-      news: 'news'
-    })
-  }
-}
+      news: "news",
+    }),
+  },
+};
 </script>
 
 <style>
 .game-news {
-  background-color: #535353;
+  background-color: #b80909;
   padding: 60px 0;
   text-align: center;
 }
 .game-news-title {
+  font-size: 1.7em;
   margin: 6px 0;
   color: white;
 }

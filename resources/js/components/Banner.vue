@@ -1,22 +1,26 @@
 <template>
   <div class="banner">
-    <h1 class="banner-title">西安交大第五十七届校运会</h1>
-    <p class="banner-subtitle">不忘昔日千里西行路，一步一脚印，场上自强不息，场下奋发图强，再度西进创新港</p>
+    <h1 class="banner-title">西安交大第五十八届校运会</h1>
+    <p class="banner-subtitle">
+      不忘昔日千里西行路，一步一脚印，场上自强不息，场下奋发图强，再度西进创新港
+    </p>
     <mu-flex class="flex-wrapper" justify-content="center">
-      <mu-button color="#3b55e6" class="banner-live-button" @click="enterLive">进入直播</mu-button>
+      <mu-button color="#3b55e6" class="banner-live-button" @click="enterLive"
+        >进入直播</mu-button
+      >
     </mu-flex>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Banner',
+  name: "Banner",
   methods: {
     enterLive() {
-      window.open('https://live.bilibili.com/5658150', '_blank')
-    }
-  }
-}
+      window.open("https://live.bilibili.com/5658150", "_blank");
+    },
+  },
+};
 </script>
 
 <style>
