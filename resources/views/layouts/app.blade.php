@@ -28,5 +28,10 @@
         @include('layouts._footer')
     </div>
     <script src="{{ mix('js/app.js') }}"></script>
+    <script type="text/javascript">
+        console.log("%ceeyes.net", "font-size: 65px; color: #008aff; text-shadow: 0 0 10px rgba(0,138,255,0.8); font-style:italic;");
+        console.log("%c精彩有e瞳，美妙无异同~", "margin-left: 10px; font-size:25px; color: #008aff;");
+        console.log("%c想加入e瞳网？请发送邮件到 331531997 at qq dot com （注明“From console”）。", "margin-left: 10px; color: #008aff;");
+    </script>
 </body>
 </html>
