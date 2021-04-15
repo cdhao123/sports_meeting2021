@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Game;
 use App\Models\News;
 use App\Models\Team;
+use App\Models\Image;
 use App\Http\Controllers\Controller;
 
 class DataController extends Controller
@@ -118,6 +119,15 @@ class DataController extends Controller
             'games_13am_field' => ['data' => $games_13am_field_array],
             'games_13pm_track' => ['data' => $games_13pm_track_array],
             'games_13pm_field' => ['data' => $games_13pm_field_array],
+        ];
+    }
+    public  function photos()
+    {
+        # code...
+        $images = Image::select('id', 'path', 'game_id', "description")->orderBy('updated_at', 'desc')->get();
+
+        return [
+            'data' => array_values($images->toArray())
         ];
     }
 }

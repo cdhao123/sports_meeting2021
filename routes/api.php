@@ -20,5 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('news', 'Api\DataController@news');
 Route::get('teams', 'Api\DataController@teams');
 Route::get('games', 'Api\DataController@games');
+Route::get('photos', 'Api\DataController@photos');
 
 Route::post('upload', 'Api\ImagesController@store')->name('api.upload');

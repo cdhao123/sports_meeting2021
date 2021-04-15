@@ -29,5 +29,12 @@
             <p>管理入口</p>
             <a class="btn btn-primary btn-lg" href="{{ route('games.index') }}" role="button">点击进入</a>
         </div>
+        <div class="jumbotron">
+            <h1 class="display-4">图片管理</h1>
+            <p class="lead">添加、删除以及修改图片信息</p>
+            <hr class="my-4">
+            <p>管理入口</p>
+            <a class="btn btn-primary btn-lg" href="{{ route('photos.index') }}" role="button">点击进入</a>
+        </div>
     </div>
 @endsection

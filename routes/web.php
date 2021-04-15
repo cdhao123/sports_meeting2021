@@ -21,3 +21,4 @@ Route::post('logout', 'LoginController@logout')->name('logout');
 Route::resource('news', 'NewsController', ['except' => ['edit', 'update']]);
 Route::resource('games', 'GamesController', ['except' => ['show']])->middleware('auth');
 Route::resource('teams', 'TeamsController', ['except' => ['show']])->middleware('auth');
+Route::resource('photos', 'PhotosController', ['except' => ['show']])->middleware('auth');

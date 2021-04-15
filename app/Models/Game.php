@@ -101,6 +101,7 @@ class Game extends Model
     {
         $data = [];
 
+        $data['id'] = $this->id;
         $data['name'] = $this->name;
         $data['begins_at'] = $this->begins_at->toDateTimeString();
         $data['golden_name'] = $this->golden_name;

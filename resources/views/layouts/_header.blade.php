@@ -10,6 +10,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('news.index') }}">新闻管理</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('teams.index') }}">队伍管理</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('games.index') }}">赛事管理</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('photos.index') }}">图片管理</a></li>
             </ul>
 
             <ul class="navbar-nav navbar-right">
