@@ -125,7 +125,11 @@ class DataController extends Controller
     {
         # code...
         $images = Image::select('id', 'path', 'game_id', "description")->orderBy('updated_at', 'desc')->get();
-
+        foreach ($images as $image ) {
+            # code...
+            $name=$image->game()->value('name');
+            $image->game_name=$name;
+        }
         return [
             'data' => array_values($images->toArray())
         ];

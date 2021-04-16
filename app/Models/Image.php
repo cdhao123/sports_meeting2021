@@ -11,4 +11,8 @@ class Image extends Model
     protected $dates = [
         'shot_time'
     ];
+    public function game()
+    {
+        return $this->belongsTo('App\Models\Game');
+    }
 }
