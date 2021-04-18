@@ -60,65 +60,65 @@ class DataController extends Controller
 
     public function games()
     {
-        $games_12am_track = Game::whereBetween('begins_at', ['2019-04-12 00:00:00', '2019-04-12 11:59:59'])->where('class', 1)->orderBy('begins_at', 'asc')->get();
-        $games_12am_field = Game::whereBetween('begins_at', ['2019-04-12 00:00:00', '2019-04-12 11:59:59'])->where('class', 2)->orderBy('begins_at', 'asc')->get();
-        $games_12pm_track = Game::whereBetween('begins_at', ['2019-04-12 12:00:00', '2019-04-12 23:59:59'])->where('class', 1)->orderBy('begins_at', 'asc')->get();
-        $games_12pm_field = Game::whereBetween('begins_at', ['2019-04-12 12:00:00', '2019-04-12 23:59:59'])->where('class', 2)->orderBy('begins_at', 'asc')->get();
-        $games_13am_track = Game::whereBetween('begins_at', ['2019-04-13 00:00:00', '2019-04-13 11:59:59'])->where('class', 1)->orderBy('begins_at', 'asc')->get();
-        $games_13am_field = Game::whereBetween('begins_at', ['2019-04-13 00:00:00', '2019-04-13 11:59:59'])->where('class', 2)->orderBy('begins_at', 'asc')->get();
-        $games_13pm_track = Game::whereBetween('begins_at', ['2019-04-13 12:00:00', '2019-04-13 23:59:59'])->where('class', 1)->orderBy('begins_at', 'asc')->get();
-        $games_13pm_field = Game::whereBetween('begins_at', ['2019-04-13 12:00:00', '2019-04-13 23:59:59'])->where('class', 2)->orderBy('begins_at', 'asc')->get();
+        $games_23am_track = Game::whereBetween('begins_at', ['2021-04-23 00:00:00', '2021-04-23 11:59:59'])->where('class', 1)->orderBy('begins_at', 'asc')->get();
+        $games_23am_field = Game::whereBetween('begins_at', ['2021-04-23 00:00:00', '2021-04-23 11:59:59'])->where('class', 2)->orderBy('begins_at', 'asc')->get();
+        $games_23pm_track = Game::whereBetween('begins_at', ['2021-04-23 12:00:00', '2021-04-23 23:59:59'])->where('class', 1)->orderBy('begins_at', 'asc')->get();
+        $games_23pm_field = Game::whereBetween('begins_at', ['2021-04-23 12:00:00', '2021-04-23 23:59:59'])->where('class', 2)->orderBy('begins_at', 'asc')->get();
+        $games_24am_track = Game::whereBetween('begins_at', ['2021-04-24 00:00:00', '2021-04-24 11:59:59'])->where('class', 1)->orderBy('begins_at', 'asc')->get();
+        $games_24am_field = Game::whereBetween('begins_at', ['2021-04-24 00:00:00', '2021-04-24 11:59:59'])->where('class', 2)->orderBy('begins_at', 'asc')->get();
+        $games_24pm_track = Game::whereBetween('begins_at', ['2021-04-24 12:00:00', '2021-04-24 23:59:59'])->where('class', 1)->orderBy('begins_at', 'asc')->get();
+        $games_24pm_field = Game::whereBetween('begins_at', ['2021-04-24 12:00:00', '2021-04-24 23:59:59'])->where('class', 2)->orderBy('begins_at', 'asc')->get();
 
-        $games_12am_track_array = [];
-        $games_12am_field_array = [];
-        $games_12pm_track_array = [];
-        $games_12pm_field_array = [];
-        $games_13am_track_array = [];
-        $games_13am_field_array = [];
-        $games_13pm_track_array = [];
-        $games_13pm_field_array = [];
+        $games_23am_track_array = [];
+        $games_23am_field_array = [];
+        $games_23pm_track_array = [];
+        $games_23pm_field_array = [];
+        $games_24am_track_array = [];
+        $games_24am_field_array = [];
+        $games_24pm_track_array = [];
+        $games_24pm_field_array = [];
 
-        foreach ($games_12am_track as $game) {
-            $games_12am_track_array[] = $game->toArray();
+        foreach ($games_23am_track as $game) {
+            $games_23am_track_array[] = $game->toArray();
         }
 
-        foreach ($games_12am_field as $game) {
-            $games_12am_field_array[] = $game->toArray();
+        foreach ($games_23am_field as $game) {
+            $games_23am_field_array[] = $game->toArray();
         }
 
-        foreach ($games_12pm_track as $game) {
-            $games_12pm_track_array[] = $game->toArray();
+        foreach ($games_23pm_track as $game) {
+            $games_23pm_track_array[] = $game->toArray();
         }
 
-        foreach ($games_12pm_field as $game) {
-            $games_12pm_field_array[] = $game->toArray();
+        foreach ($games_23pm_field as $game) {
+            $games_23pm_field_array[] = $game->toArray();
         }
 
-        foreach ($games_13am_track as $game) {
-            $games_13am_track_array[] = $game->toArray();
+        foreach ($games_24am_track as $game) {
+            $games_24am_track_array[] = $game->toArray();
         }
 
-        foreach ($games_13am_field as $game) {
-            $games_13am_field_array[] = $game->toArray();
+        foreach ($games_24am_field as $game) {
+            $games_24am_field_array[] = $game->toArray();
         }
 
-        foreach ($games_13pm_track as $game) {
-            $games_13pm_track_array[] = $game->toArray();
+        foreach ($games_24pm_track as $game) {
+            $games_24pm_track_array[] = $game->toArray();
         }
 
-        foreach ($games_13pm_field as $game) {
-            $games_13pm_field_array[] = $game->toArray();
+        foreach ($games_24pm_field as $game) {
+            $games_24pm_field_array[] = $game->toArray();
         }
 
         return [
-            'games_12am_track' => ['data' => $games_12am_track_array],
-            'games_12am_field' => ['data' => $games_12am_field_array],
-            'games_12pm_track' => ['data' => $games_12pm_track_array],
-            'games_12pm_field' => ['data' => $games_12pm_field_array],
-            'games_13am_track' => ['data' => $games_13am_track_array],
-            'games_13am_field' => ['data' => $games_13am_field_array],
-            'games_13pm_track' => ['data' => $games_13pm_track_array],
-            'games_13pm_field' => ['data' => $games_13pm_field_array],
+            'games_23am_track' => ['data' => $games_23am_track_array],
+            'games_23am_field' => ['data' => $games_23am_field_array],
+            'games_23pm_track' => ['data' => $games_23pm_track_array],
+            'games_23pm_field' => ['data' => $games_23pm_field_array],
+            'games_24am_track' => ['data' => $games_24am_track_array],
+            'games_24am_field' => ['data' => $games_24am_field_array],
+            'games_24pm_track' => ['data' => $games_24pm_track_array],
+            'games_24pm_field' => ['data' => $games_24pm_field_array],
         ];
     }
     public  function photos()
