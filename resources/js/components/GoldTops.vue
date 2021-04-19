@@ -1,6 +1,6 @@
 <template>
   <div class="gold-tops">
-    <div class="gold-tops-header">金牌aaaaaa排名</div>
+    <div class="gold-tops-header">金牌排名</div>
     <ul class="gold-tops-list">
       <li
         v-for="(item, i) in teamsRankedGolden"
@@ -30,11 +30,13 @@ export default {
 </script>
 
 <style>
+.gold-tops-list{
+  background-color: white;
+}
 .gold-tops {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 240px;
-  background-color: rgb(175, 19, 19);
   border-radius: 12px;
   box-shadow: 2px 2px 12px #999;
   overflow: hidden;

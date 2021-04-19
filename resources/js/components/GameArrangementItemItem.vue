@@ -121,6 +121,9 @@ export default {
 </script>
 
 <style>
+.game-arrangement-item-item{
+  margin: 0 auto;
+}
 .game-arrangement-item-item-title-container {
   position: relative;
   display: flex;

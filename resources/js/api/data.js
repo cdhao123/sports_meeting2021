@@ -20,3 +20,10 @@ export function fetchGames() {
     method: 'get'
   })
 }
+
+export function fetchPhotos() {
+  return axios({
+    url: '/api/photos',
+    method: 'get'
+  })
+}

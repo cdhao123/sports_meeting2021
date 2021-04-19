@@ -30,14 +30,18 @@ export default {
   background: url("../../img/banner.jpg");
   background-size: auto 200px;
   background-position: center center;
-  color: white;
+  color: rgb(22, 1, 1);
+}
+.banner-title{
+  color: rgb(3, 2, 17);
+  font-size: 36px;
+  font-weight: 1000;
 }
 .banner h1,
 .banner p {
   margin: 0 auto;
   text-align: center;
   font-family: "Microsoft Yahei";
-  font-weight: normal;
 }
 .banner-live-button {
   margin: 20px auto;
